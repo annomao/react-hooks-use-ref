@@ -23,6 +23,7 @@ function Ticker() {
   }, []);
 
   useEffect(() => {
+    console.log(price)
     if (prevPrice.current.value < price.value) {
       setColor("green");
     } else if (prevPrice.current.value > price.value) {
@@ -31,6 +32,7 @@ function Ticker() {
       setColor("black");
     }
     prevPrice.current = price;
+    console.log(prevPrice)
   }, [price]);
 
   return (
